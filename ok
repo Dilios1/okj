@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+
+int main()
+{
+  meniu();
+    return 0;
+}
+
+
+ void meniu()
+ {
+     while (true)
+     {
+
+
+ double note;
+char choice;
+    printf("Enter an operator (N, M, P, E): \n");
+    scanf("%c", &choice);
+    switch (choice)
+    {
+        case 'N':
+        {
+          printf("Notele sunt:\n");
+        scanf("%d", &note);
+        while (note!=0){
+       scanf("%d", &note);
+
+          }
+
+       break;
+
+
+        }
+
+        case 'P':
+            {
+            int cntr1,cntr2;
+            int A=5;
+            int B=10;
+            if(note<=A)
+            {
+                cntr1++;
+            }
+            else if(note>A && note<=B)
+            {
+                cntr2++;
+            }
+            printf( "note sub 5: %d || note peste 5: %d",&cntr1, &cntr2);
+
+            }
+
+
+        case 'E':
+            {
+            return 0;
+            }
+    }
+     }
+ }
