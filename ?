@@ -1,0 +1,106 @@
+ Am o problema la CASE 'P', nu mi se afiseaza numerele care sunt peste 5. Pana acolo merge ok
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+
+int main()
+{
+    meniu();
+    return 0;
+}
+
+
+void meniu()
+{
+    int sir[100], elevi;
+    int mg,cntr=0;
+    int nr, A=5, B=10;
+    char choice;
+    printf("Introduceti numar elevi:\n");
+    scanf("%d",&elevi);
+    fflush(stdin);
+
+
+
+
+
+     while(true)
+        {
+     printf("\nEnter an operator (N, M, P, E): \n");
+    scanf("%c", &choice);
+    switch (choice)
+    {
+
+
+
+
+        case 'N':
+        {
+            printf("Notele sunt:\n");
+            for(nr=0; nr<elevi; nr++)
+            {
+                scanf("%d", &sir[nr]);
+
+            }
+
+            break;
+
+
+        }
+
+        case 'M':
+        {
+            for(nr=0; nr<elevi; nr++)
+            {
+                mg=mg+sir[nr];
+
+
+            }
+            printf("Media generala este :%d",mg/elevi);
+
+
+
+        }
+
+
+        case 'P':
+        {
+            int A=5;
+         for(nr=0;nr>elevi;nr++)
+         {
+             if(sir[nr]>=A)
+             {
+                cntr++;
+             }
+
+         }
+         printf("\nElevi care au peste 5: %d",cntr);
+        }
+
+
+        }
+
+    }
+}
